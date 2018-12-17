@@ -1,0 +1,31 @@
+$_:  5px;
+
+// Base Color
+$lye:#fbfdce; $gy:#f3f3f1; $ye:#d6cf7b; $gd:#7d7d61;
+$bk:#2b2b2b;
+
+// Font Size
+@mixin fz($size: 24, $base: 16) {
+    font-size: $size + px;
+    font-size: ($size / $base) * 1rem;
+}
+
+body{
+    font-family: sans-serif; color:$bk;
+}
+
+$L:     1024px;
+$M:     768px;
+$S:     480px;
+
+@mixin MQ($canvas) {
+    @if $canvas == L {
+        @media only screen and (max-width: $L) { @content; }
+    }
+    @else if $canvas == M {
+        @media only screen and (max-width: $M) { @content; }
+    }
+    @else if $canvas == S {
+        @media only screen and (max-width: $S) { @content; }
+    }
+}
