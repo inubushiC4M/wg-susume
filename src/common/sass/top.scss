@@ -26,26 +26,10 @@ img{width:100%;}
 dl{
     dt,dd{line-height: 2;}
 }
-.btn_box{
-    a{
-        transition: all 0.5s; padding: 10px 25px; display: inline-block; border-bottom: 2px solid $bk; position: relative; box-sizing: border-box; overflow: hidden; z-index:2;
-        &:after{
-            content:""; z-index:-1; transition: all 0.5s; position: absolute; top: 0;left: 0; width: 100%;height: 100%; background-color:$bk; transform: translateY(100%);
-        }
-        &:hover{
-            color: #fff;
-            &:after{
-                transform: translateY(0%);
-            }
-        }
-    }
-    @include MQ(S){
-        a{
-            padding: 0 25px;
-        }
-    }
-}
 
+/*===============================
+ヘッダー
+===============================*/
 header{
     margin:10px 0;
     nav{
@@ -90,7 +74,16 @@ header{
         }
     }
 }
-//メインビジュアル
+/*===============================
+フッター
+===============================*/
+footer{
+    margin-top:$_*18; padding:$_*10 0; text-align: center; background: $gd; color:#fff;
+}
+
+/*===============================
+メインビジュアル
+===============================*/
 #mv{
     background-image:url(/common/images/top/mv.png);
     max-width: 1280px; margin: 0 auto;
@@ -113,7 +106,9 @@ header{
         }
     }
 }
-//top コンテンツ共通
+/*===============================
+top コンテンツ
+===============================*/
 .ctg{
     .inner{
         max-width: 1280px; margin: 0 auto;
@@ -135,8 +130,9 @@ header{
             }
         }
     }
+    // ===============================
     //STYLE
-    &#style{
+    &.style{
         .content{
             text-align: center;
             ul{
@@ -180,8 +176,9 @@ header{
             }
         }
     }
+    // ===============================
     //OTOMO
-    &#otomo{
+    &.otomo{
         background-color: $gy;
         .itemlist{
             display: flex; text-align: left; justify-content: space-around;
@@ -215,8 +212,9 @@ header{
             }
         }
     }
+    // ===============================
     //BOOKSHELF
-    &#bookshelf{
+    &.bookshelf{
         .booklist{
             padding-left:calc(100% / 3);
             background-image: url(/common/images/top/pic-2.png);
@@ -265,8 +263,9 @@ header{
             @include MQ(S) {margin:$_*4 0;}
         }
     }
+    // ===============================
     //PROFILE
-    &#profile{
+    &.profile{
         padding: 0 $_*4;
         .inner{
             border: 1px solid $ye; padding: $_*12;
@@ -305,11 +304,10 @@ header{
         }
     }
 }
-footer{
-    margin-top:$_*18; padding:$_*10 0; text-align: center; background: $gd; color:#fff;
-}
 
-//ページトップへ戻る
+/*===============================
+ページトップへ戻る
+===============================*/
 .page_top{
     position: fixed; bottom: $_*4; right: $_*4; z-index: 100;
     a{
@@ -335,8 +333,28 @@ footer{
         }
     }
 }
-
-//ボタン
+/*===============================
+ボタン装飾
+===============================*/
+.btn_box{
+    a{
+        transition: all 0.5s; padding: 10px 25px; display: inline-block; border-bottom: 2px solid $bk; position: relative; box-sizing: border-box; overflow: hidden; z-index:2;
+        &:after{
+            content:""; z-index:-1; transition: all 0.5s; position: absolute; top: 0;left: 0; width: 100%;height: 100%; background-color:$bk; transform: translateY(100%);
+        }
+        &:hover{
+            color: #fff;
+            &:after{
+                transform: translateY(0%);
+            }
+        }
+    }
+    @include MQ(S){
+        a{
+            padding: 0 25px;
+        }
+    }
+}
 .wbl_btn{
     display: inline-block; position: relative;
     &:hover {

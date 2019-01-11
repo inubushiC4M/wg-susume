@@ -7,7 +7,7 @@ const autoprefixer = require('gulp-autoprefixer');
 const babel = require('gulp-babel');
 const sass = require('gulp-sass');
 const packageImporter = require('node-sass-package-importer');
-const csscomb    = require('gulp-csscomb');
+const csscomb = require('gulp-csscomb');
 const mmq = require('gulp-merge-media-queries');
 const csso = require('gulp-csso');
 const uglify = require('gulp-uglify');
@@ -38,19 +38,19 @@ gulp.task('sass', () => {
     .pipe(csscomb())
     .pipe(mmq())
     .pipe(csso())
-    .pipe(gulp.dest('src/'+assetsDir+'css/'))
+    .pipe(gulp.dest('dist/'+assetsDir+'css/'))
     .pipe(notify({
         title: 'compile OK :)',
         message: new Date(),
     }))
 });
 
-gulp.task( 'css', () => {
-    return gulp.src('src/**/*.css')
-    .pipe(cache('css-cache'))
-    .pipe(gulp.dest(destDir))
-    .pipe(browser.reload({stream:true}))
-});
+// gulp.task( 'css', () => {
+//     return gulp.src('src/**/*.css')
+//     .pipe(cache('css-cache'))
+//     .pipe(gulp.dest(destDir))
+//     .pipe(browser.reload({stream:true}))
+// });
 
 
 gulp.task( 'js', () => {
@@ -89,15 +89,12 @@ gulp.task('copyResource', () => {
     .pipe(browser.reload({stream:true}))
 });
 
-gulp.task('default',['sass', 'css', 'js', 'html', 'copyResource', 'server'], () => {
+gulp.task('default',['sass', 'js', 'html', 'copyResource', 'server'], () => {
     gulp.watch(['src/**/*.html'], (event) => {
         gulp.start(['html']);
     });
     gulp.watch(['src/**/*.scss'], (event) => {
         gulp.start(['sass']);
-    });
-    gulp.watch(['src/**/*.css'], (event) => {
-        gulp.start(['css']);
     });
     gulp.watch(['src/**/*.js'], (event) => {
         gulp.start(['js']);
