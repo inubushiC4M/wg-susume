@@ -1,0 +1,39 @@
+{
+    "name": "wg-susume",
+    "author": "wg-susume",
+    "description": "",
+    "repository field": "",
+    "scripts": {
+        "gulp": "gulp"
+    },
+    "devDependencies": {
+        "babel-preset-env": "^1.6.1",
+        "babel-preset-es2015": "^6.24.1",
+        "browser-sync": "^2.26.3",
+        "gulp": "^3.9.1",
+        "gulp-autoprefixer": "^4.0.0",
+        "gulp-babel": "^6.1.2",
+        "gulp-cached": "^1.1.1",
+        "gulp-changed": "^3.1.0",
+        "gulp-csscomb": "^3.0.8",
+        "gulp-csso": "^3.0.0",
+        "gulp-htmlhint": "^0.3.1",
+        "gulp-imagemin": "^3.3.0",
+        "gulp-merge-media-queries": "^0.2.1",
+        "gulp-notify": "^3.0.0",
+        "gulp-nunjucks-render": "^2.2.1",
+        "gulp-plumber": "^1.1.0",
+        "gulp-rename": "^1.2.2",
+        "gulp-sass": "^3.1.0",
+        "gulp-uglify": "^3.0.0",
+        "imagemin-mozjpeg": "^6.0.0",
+        "imagemin-pngquant": "^5.0.1",
+        "node-sass-package-importer": "^5.1.0",
+        "npm": "^5.3.0",
+        "ress": "^1.2.2"
+    },
+    "engines": {
+        "node": ">=8.1.3"
+    },
+    "main": "gulpfile.js"
+}
