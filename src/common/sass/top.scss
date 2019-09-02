@@ -103,6 +103,7 @@ top コンテンツ
             }
         }
     }
+
     // ===============================
     //STYLE
     &.style {
@@ -122,6 +123,7 @@ top コンテンツ
                     flex-wrap: wrap;
 
                     li {
+
                         &:nth-child(1),
                         &:nth-child(3) {
                             width: 50%;
@@ -142,6 +144,7 @@ top コンテンツ
 
                 @include MQ(S) {
                     li {
+
                         &:nth-child(1),
                         &:nth-child(3) {
                             a img {
@@ -178,6 +181,7 @@ top コンテンツ
             }
         }
     }
+
     // ===============================
     //OTOMO
     &.otomo {
@@ -228,6 +232,7 @@ top コンテンツ
             }
         }
     }
+
     // ===============================
     //BOOKSHELF
     &.bookshelf {
@@ -238,24 +243,29 @@ top コンテンツ
             background-position: 6% 0;
             background-size: auto;
 
-            li {
-                dl {
+
+            dl {
+                display: none;
+                padding: 10px;
+
+                &:nth-child(-n + 4) {
                     display: flex;
-
-                    dt {
-                        width: 50%;
-                        font-weight: bold;
-                    }
-
-                    dd {
-                        width: 25%;
-                    }
                 }
 
-                + li {
-                    margin-top: 20px;
+                dt {
+                    width: 50%;
+                    font-weight: bold;
+                }
+
+                dd {
+                    width: 25%;
                 }
             }
+
+            +li {
+                margin-top: 20px;
+            }
+
 
             @include MQ(L) {
                 background-size: 220px;
@@ -266,34 +276,34 @@ top コンテンツ
                 background-position: top center;
                 background-size: 200px;
 
-                li {
-                    width: 80%;
-                    margin: 0 auto;
 
-                    dl {
-                        flex-wrap: wrap;
+                width: 80%;
+                margin: 0 auto;
 
-                        dt {
-                            width: 100%;
-                        }
 
-                        dd {
-                            &:first-child {
-                                width: 40%;
-                            }
-
-                            &:last-child {
-                                width: 60%;
-                            }
-                        }
-                    }
-                }
             }
 
             @include MQ(S) {
-                li {
-                    width: 100%;
-                    padding: 0 $_ * 3;
+
+                width: 100%;
+                padding: 150px $_ * 3 0;
+
+                dl {
+                    flex-wrap: wrap;
+
+                    dt {
+                        width: 100%;
+                    }
+
+                    dd {
+                        &:first-child {
+                            width: 40%;
+                        }
+
+                        &:last-child {
+                            width: 60%;
+                        }
+                    }
                 }
             }
         }
@@ -311,6 +321,7 @@ top コンテンツ
             }
         }
     }
+
     // ===============================
     //PROFILE
     &.profile {
