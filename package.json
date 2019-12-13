@@ -26,7 +26,7 @@
         "imagemin-mozjpeg": "^6.0.0",
         "imagemin-pngquant": "^5.0.1",
         "node-sass-package-importer": "^5.1.0",
-        "npm": "^5.3.0",
+        "npm": "^6.13.4",
         "ress": "^1.2.2"
     },
     "engines": {
